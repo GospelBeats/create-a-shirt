@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Gayathri:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Create A Shirt</title>
+
+    <style>
+    .mb {
+        margin-bottom: 10px;
+    }
+    .gfont {
+        font-family: 'Gayathri', sans-serif;
+    }
+    #pic {
+        width:100%;
+        height: auto;
+    }
+
+    @media screen and (max-width: 1200px) {
+  #pic{
+    display: block; 
+    float: none;
+  }
+}
+
+    </style>
+</head>
+
+<body style="background-color:#eaecf7">
+
+    <div class="w3-container" style="margin-top: 50px">
+
+            <div class="w3-container w3-center w3-row">
+                    <h1 class="gfont">Create You Own T-Shirt</h1>
+                </div>
+                <hr>
+    <div class="w3-container w3-row" style="margin-top: 100px">
+
+        <div class="w3-container w3-half">
+             <div class="w3-container" style="margin-left:100px">
+
+                    <p><label class="w3-text-teal"><h1 class="gfont">Create Shirt Text</h1></label></p>
+                    <p><input maxlength="10" class="w3-input w3-border w3-round w3-opacity" id="name" type="text" placeholder="10 letters max" style="max-width: 200px"></p> 
+                    <button id="btn" class="w3-btn w3-indigo w3-round mb">Add Text</button><br><br>
+                    <button id="bold" class="w3-btn w3-blue w3-round mb">Bold Text</button>
+                    <button id="lg" class="w3-btn w3-blue w3-round mb">Large Text</button>
+                    <button id="sm" class="w3-btn w3-blue w3-round mb">Small Text</button><br>
+                    <button id="fone" class="w3-btn w3-blue w3-round mb">Font One</button>
+                    <button id="ftwo" class="w3-btn w3-blue w3-round mb">Font Two</button>
+                    <button id="reset" class=" w3-center w3-btn w3-tranparent w3-border w3-round mb">Reset</button>
+                    <hr>
+                    <h1 class="gfont">Change Shirt Color</h1>
+                    <button id="red" class="w3-btn w3-round mb w3-text-white" style="background-color: red">Red</button>
+                    <button id="maroon" class="w3-btn w3-text-white w3-round mb" style="background-color: maroon">Maroon</button>
+                    <button id="green" class="w3-green w3-btn w3-round mb">Green</button>
+                    <button id="black" class="w3-black w3-btn w3-round mb">Black</button>
+                        
+            </div>   
+        </div>
+
+        <div class="w3-container w3-half">
+        <div class="w3-display-container w3-center" style="max-width:425px">
+        <img id="pic" class="w3-round" src="green.jpg" width="425" height="453" alt="pic 1">   
+        <h2 id="text" class="w3-display-middle w3-text-white" style="top:150px; margin:auto">TEXT</h2> 
+        </div>
+        </div>
+
+    </div>
+    
+    </div>
+
+    <hr>
+    <script>
+
+$(document).ready(function() {
+
+        $("#btn").on('click', function(){
+            let text = $("#name").val();
+
+            $("#text").text(text);
+            $("#name").val("");
+           
+        });
+
+        // shirt color functions
+
+        $("#green").on('click', function(){
+            $("#pic").attr("src","green.jpg");
+        });
+
+        $("#black").on('click', function(){
+            $("#pic").attr("src","black.jpg");
+        });
+
+        $("#maroon").on('click', function(){
+            $("#pic").attr("src","maroon.jpg");
+        });
+
+        $("#red").on('click', function(){
+            $("#pic").attr("src","red.jpg");
+        });
+       
+       // text edits
+
+       $("#lg").on('click', function(){
+            $("#text").css("font-size", "40px");
+        });
+
+        $("#sm").on('click', function(){
+            $("#text").css("font-size", "20px");
+        });
+
+        $("#bold").on('click', function(){
+            $("#text").css("font-weight", "bold");
+        });
+
+        $("#fone").on('click', function(){
+            $("#text").css("font-family","impact");
+        });
+
+        $("#ftwo").on('click', function(){
+            $("#text").css("font-family","comic sans ms");
+        });
+
+        $("#reset").on('click', function(){
+            $("#text").css({
+            "font-family": "sans-serif",
+            "font-weight": "400",
+            "font-size": "30px"
+        });
+        });
+
+});
+
+    </script>
+
+</body>
+</html>
