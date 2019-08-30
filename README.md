@@ -1,3 +1,5 @@
-# create-a-shirt
+# Create-A-Shirt
 
-![APP Sreenshot](https://github.com/GospelBeats//blob/master/app-ss.JPG)
+![APP Sreenshot](https://github.com/GospelBeats/create-a-shirt/blob/master/shirt%20pic.JPG)
+
+
